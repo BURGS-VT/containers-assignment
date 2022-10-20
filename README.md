@@ -154,7 +154,7 @@ Once you have finished testing, stop the image
 $ docker stop web
 ```
 
-> ***Take a screenshot of your terminal showing the commands needed to build and run a container image***
+> ***Take a screenshot of your terminal showing the commands needed to build and run a container image and displaying your changes to index.html***
 ![](images/ScreenShot1.png)
 
 ## Deploying your container image to a registry
