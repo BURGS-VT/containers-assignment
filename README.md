@@ -9,7 +9,7 @@ It is recommended you complete this assignment on rlogin
 $ ssh <pid>@rlogin.cs.vt.edu
 ```
 
-You will then want to clone this git repo
+You will then want to clone this git repo on rlogin
 ```
 $ git clone https://git.cs.vt.edu/<pid>/containers.git
 ```
@@ -121,7 +121,7 @@ COPY site-content /usr/share/nginx/html
 
 This `Dockerfile` is using `nginx:latest` as the base image and then copies our `site-content` files on top of that.
 
-Before building this container image, we need to populate our `site-content` directory with our static website (you can edit the website I have already provided or copy in your own website files) and make sure the directory has the proper permissions where it can be copied over.
+Before building this container image, we need to populate our `site-content` directory with our static website (edit the `index.html` file to use your pid) and make sure the directory has the proper permissions where it can be copied over.
 
 - Populate `site-content/index.html` with your website homepage and copy any other website files into that directory
 - Use `chmod` to ensure the directory has proper permissions
@@ -218,7 +218,7 @@ Copy the IP address and navigate to it in your browser. Congratulations! You sho
 > ***Take a screenshot of your browser showing your running website***
 ![](images/ScreenShot2.png)
 
-Make sure that you click "Stop" and optionally "Delete" on your running container in Azure when finished with the assignment. If you stop your container in some reasonable amount of time, you will use less than $1 of credit on this assignment (probably less than 10 cents). You can use the remaining $99+ of credit on personal projects!
+Make sure that you click "Stop" and optionally "Delete" on your running container in Azure when finished with the assignment. If you stop your container in some reasonable amount of time, you will use less than $1 of credit on this assignment (probably less than 10 cents). You can use the remaining $99+ of credit on personal projects! You can always edit your website(index.html), rebuild the docker image, and redeploy your container.
 
 ## References
 
