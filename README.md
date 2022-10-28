@@ -53,7 +53,7 @@ Calculate your port number using the formula `6 * <LAST 4 DIGITS OF STUDENT ID>`
 $ docker run --rm -d -p <YOUR PORT>:80 --name web nginx
 ```
 
-When pulling the image, it'll likely ask you which registry you want to pull from. It is recommended to use `docker.io` for this assignment.
+When pulling the nginx web server image, it'll likely ask you which registry you want to pull from. It is recommended to use `docker.io` for this assignment. 
 
 ```
 ? Please select an image:
@@ -112,18 +112,22 @@ $ docker stop web
 ## Building Our Own Container Image
 By default, NGINX will serve whatever files are located in `/usr/share/nginx/html` as your website. We are going to build a custom container image to bundle our web server with our static website files.
 
-The way you define what goes in a container image is by using a Dockerfile. We have provided the following Dockerfile for you.
+The way you define what goes in a container image is by using a Dockerfile. We have provided the following Dockerfile for you. It uses the latest version of the nginx webserver and copies your local site-content directory files to the docker directory that gets used for website content. 
 
 ```Dockerfile
 FROM nginx:latest
 COPY site-content /usr/share/nginx/html
 ```
 
-This `Dockerfile` is using `nginx:latest` as the base image and then copies our `site-content` files on top of that.
+This `Dockerfile` is using `nginx:latest` as the base image and then copies our `site-content` files on top of that.  Remember you can view the contents of the Dockerfile if you'd like.
 
-Before building this container image, we need to populate our `site-content` directory with our static website (edit the `index.html` file to use your pid) and make sure the directory has the proper permissions where it can be copied over.
+```
+$cat Dockerfile
+```
 
-- Populate `site-content/index.html` with your website homepage and copy any other website files into that directory
+Before building this container image, we need to populate our `site-content` directory with our static website and make sure the directory has the proper permissions where it can be copied over.
+
+- Edit the `site-content/index.html` file to use your pid (later you can explore hosting more involved websites)
 - Use `chmod` to ensure the directory has proper permissions
 ```
 $ chmod -R 744 site-content/
@@ -219,6 +223,8 @@ Copy the IP address and navigate to it in your browser. Congratulations! You sho
 ![](images/ScreenShot2.png)
 
 Make sure that you click "Stop" and optionally "Delete" on your running container in Azure when finished with the assignment. If you stop your container in some reasonable amount of time, you will use less than $1 of credit on this assignment (probably less than 10 cents). You can use the remaining $99+ of credit on personal projects! You can always edit your website(index.html), rebuild the docker image, and redeploy your container.
+
+To understand more about your azure student account, refer to https://azure.microsoft.com/en-us/free/students/.
 
 ## References
 
