@@ -141,6 +141,15 @@ $ docker build -t my-webserver .
 
 > The `-t` option is how you specify a name, aka tag, for your image. In this case `my-webserver`
 
+You can use the `docker images` command to view all saved images on your machine. At a minimum, your machine will have `my-webserver` and `nginx` as you have used those images thus far in this assignment.
+
+```
+$ docker images
+REPOSITORY               TAG         IMAGE ID      CREATED        SIZE
+localhost/my-webserver   latest      cdb1431162be  2 minutes ago  146 MB
+docker.io/library/nginx  latest      76c69feac34e  3 days ago     146 MB
+```
+
 ## Run your container image
 Now that you've built a container image `my-webserver`, you can run it using the same command you used earlier.
 ```
