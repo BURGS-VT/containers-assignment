@@ -122,7 +122,7 @@ COPY site-content /usr/share/nginx/html
 This `Dockerfile` is using `nginx:latest` as the base image and then copies our `site-content` files on top of that.  Remember you can view the contents of the Dockerfile if you'd like.
 
 ```
-$cat Dockerfile
+$ cat Dockerfile
 ```
 
 Before building this container image, we need to populate our `site-content` directory with our static website and make sure the directory has the proper permissions where it can be copied over.
