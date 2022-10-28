@@ -168,7 +168,7 @@ $ docker stop web
 ```
 
 > ***Take a screenshot of your terminal showing the commands needed to build and run a container image and displaying your changes to index.html***
-![](images/ScreenShot1.png)
+![](images/curl.png)
 
 ## Deploying your container image to a registry
 
@@ -229,7 +229,7 @@ Copy the IP address and navigate to it in your browser. Congratulations! You sho
 ![](images/RunningContainer.png)
 
 > ***Take a screenshot of your browser showing your running website***
-![](images/ScreenShot2.png)
+![](images/browser.png)
 
 Make sure that you click "Stop" and optionally "Delete" on your running container in Azure when finished with the assignment. If you stop your container in some reasonable amount of time, you will use less than $1 of credit on this assignment (probably less than 10 cents). You can use the remaining $99+ of credit on personal projects! You can always edit your website(index.html), rebuild the docker image, and redeploy your container.
 
