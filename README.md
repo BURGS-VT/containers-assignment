@@ -48,7 +48,7 @@ This `hello world` container is not very interesting. Let's try running nginx, w
 
 Before doing this, we must choose a unique port number to expose your running container. This is because you cannot have two processes running on the same port, and the entire class shares the rlogin machines.
 
-Calculate your port number using the formula `6 * <LAST 4 DIGITS OF STUDENT ID>`. For example, if my student ID ended in `5432` I would choose port `32592` as my port. Use this port for the remainder of the assignment.
+Calculate your port number using the formula `(6 * <LAST 4 DIGITS OF STUDENT ID>) + 1024`. For example, if my student ID ended in `5432` I would choose port `33616` as my port. Use this port for the remainder of the assignment.
 ```
 $ docker run --rm -d -p <YOUR PORT>:80 --name web nginx
 ```
