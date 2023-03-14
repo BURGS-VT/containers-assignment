@@ -127,7 +127,7 @@ $ cat Dockerfile
 
 Before building this container image, we need to populate our `site-content` directory with our static website and make sure the directory has the proper permissions where it can be copied over.
 
-- Edit the `site-content/index.html` file to use your pid (later you can explore hosting more involved websites)
+- Copy your HTML webpage from Week 8 HTML Intro CW into the `site-content/` directory, and name the file `index.html`. This file should contain your html source code from that assignment.
 - Use `chmod` to ensure the directory has proper permissions
 ```
 $ chmod -R 744 site-content/
